@@ -1,13 +1,12 @@
-/* Summary: 10vh (panel) + 20vh (title) + 70vh (content) = 100vh */
-
 /*-------------------------------------------*/
 /* COMPONENT: Employment outermost container */
 /*-------------------------------------------*/
 
 .Employment {
     width: 100vw;
-    height: 90vh;
-    top: 110vh;
+    height: fit-content;
+    min-height: 90vh;
+    top: 100vh;
     z-index: 450;
 }
 
@@ -16,8 +15,6 @@
 /*-----------------------------------------*/
 
 .EmploymentContent {
-    height: 70vh;
-    width: 80vw;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 2fr;
@@ -43,4 +40,16 @@
 }
 
 .EmploymentHistory {
+}
+
+/*-------------------------*/
+/* RESPONSIVENESS HANDLING */
+/*-------------------------*/
+
+@media (max-width: 768px) {
+    .EmploymentContent {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        row-gap: 5vh;
+    }
 }
