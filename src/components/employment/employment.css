@@ -1,8 +1,46 @@
+/* Summary: 10vh (panel) + 20vh (title) + 70vh (content) = 100vh */
+
+/*-------------------------------------------*/
+/* COMPONENT: Employment outermost container */
+/*-------------------------------------------*/
+
 .Employment {
     width: 100vw;
     height: 90vh;
-    position: sticky;
     top: 110vh;
-    background-color: aqua;
-    z-index: 1000;
+    z-index: 450;
+}
+
+/*-----------------------------------------*/
+/* COMPONENT: Employment content container */
+/*-----------------------------------------*/
+
+.EmploymentContent {
+    height: 70vh;
+    width: 80vw;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+    column-gap: 5vw;
+    align-self: center;
+    justify-self: center;
+}
+
+.EmploymentSummary {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 0;
+    row-gap: 5vh;
+}
+
+.EmploymentYoESummary, .EmploymentTechSummary, .EmploymentHistory {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 20px 5vw;
+}
+
+.EmploymentHistory {
 }
