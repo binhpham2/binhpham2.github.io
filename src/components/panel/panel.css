@@ -1,3 +1,7 @@
+/*------------*/
+/* ANIMATIONS */
+/*------------*/
+
 @keyframes panelAppear {
     from {
         opacity: 0;
@@ -6,6 +10,10 @@
         opacity: 1;
     }
 }
+
+/*------------------*/
+/* COMPONENT: Panel */
+/*------------------*/
 
 .Panel {
     opacity: 0;
@@ -27,6 +35,10 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
 }
+
+/*--------------------------*/
+/* COMPONENT: Panel buttons */
+/*--------------------------*/
 
 .Panel > div > button {
     width: 100%;
@@ -70,7 +82,9 @@
     display: none;
 }
 
+/*-------------------------*/
 /* RESPONSIVENESS HANDLING */
+/*-------------------------*/
 
 @media (max-width: 768px) {
     .Panel > div > button:nth-of-type(1) {

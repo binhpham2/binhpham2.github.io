@@ -1,7 +1,6 @@
 import './App.css';
 import Background from './components/background/Background'
 import Welcome from './components/welcome/Welcome'
-import MenuFrame from './components/menu/MenuFrame';
 import Panel from './components/panel/Panel';
 import { useEffect } from 'react'
 import { animateWelcome } from './scripts/animation';
@@ -33,13 +32,33 @@ const App = () => {
 
   return (
     <div className='App'>
-      <p>Please enlarge your screen or rotate your phone.</p>
-      <Panel />
-      <Background />
-      <Welcome />
-      <Employment />
+      {/*------------------*/}
+      {/* ALTERNATIVE VIEW */}
+      {/*------------------*/}
+      {/* Text on dark screen covering everything. Shown when the screen width is too small. */}
+      <p>Please enlarge your window or rotate your phone.</p>
 
-      {/*<MenuFrame />*/}
+      {/*-----------------*/}
+      {/* PERSISTING VIEW */}
+      {/*-----------------*/}
+      {/* Menu of buttons on top of the screen for navigation assistance. */}
+      <Panel />
+      {/* Animated sumi-e background and animated leafs. */}
+      <Background />
+
+      {/*--------------*/}
+      {/* CONTENT VIEW */}
+      {/*--------------*/}
+      {/* Name and a brief self-introduction. */}
+      <Welcome />
+      {/* Employment summary and history. */}
+      <Employment />
+      {/* Education. */}
+      <></>
+      {/* Projects. */}
+      <></>
+      {/* Certificates. */}
+      <></>
     </div>
   );
 }

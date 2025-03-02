@@ -1,3 +1,6 @@
+/*
+ANIMATE THE WELCOME SECTION ON SCROLLING 
+*/
 export const animateWelcome = () => {
     const welcomeComponent = document.querySelector('.Welcome')
     window.addEventListener('scroll', () => {

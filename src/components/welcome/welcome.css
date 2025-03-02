@@ -1,6 +1,66 @@
-/*-------------------------*/
-/* GENERAL WELCOME SECTION */
-/*-------------------------*/
+/*----------------------------*/
+/* ANIMATION: Welcome section */
+/*----------------------------*/
+
+@keyframes moveOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-50vw);
+        opacity: 0;
+    }
+}
+
+/*-----------------*/
+/* ANIMATION: Name */
+/*-----------------*/
+
+@keyframes nameFloat {
+    0% {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(8px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+}
+
+@keyframes nameAppear {
+    0% {
+        stroke-dashoffset: 100vw;
+    }
+    90% {
+        fill: transparent;
+    }
+    100% {
+        fill: rgb(255, 255, 255);
+        stroke-dashoffset: 0;
+    }
+}
+
+/*---------------------------------*/
+/* ANIMATION: Introduction section */
+/*---------------------------------*/
+
+@keyframes introductionTextAppear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*----------------------------*/
+/* COMPONENT: Welcome section */
+/*----------------------------*/
 
 .Welcome {
     display: grid;
@@ -18,24 +78,9 @@
     padding: 0;
 }
 
-/*------*/
-/* NAME */
-/*------*/
-
-@keyframes nameFloat {
-    0% {
-        transform: translateY(0vh);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(8px);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateY(0vh);
-        opacity: 1;
-    }
-}
+/*-----------------*/
+/* COMPONENT: Name */
+/*-----------------*/
 
 .Name {
     position: relative;
@@ -54,18 +99,6 @@
     animation: nameFloat 2s linear infinite;
 }
 
-@keyframes nameAppear {
-    0% {
-        stroke-dashoffset: 100vw;
-    }
-    90% {
-        fill: transparent;
-    }
-    100% {
-        fill: rgb(255, 255, 255);
-        stroke-dashoffset: 0;
-    }
-}
 
 .Name > svg path {
     fill: transparent;
@@ -77,18 +110,9 @@
     animation-delay: 1s;
 }
 
-/*----------------------*/
-/* INTRODUCTION SECTION */
-/*----------------------*/
-
-@keyframes introductionTextAppear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+/*---------------------------------*/
+/* COMPONENT: Introduction section */
+/*---------------------------------*/
 
 .Introduction {
     position: relative;
@@ -141,7 +165,9 @@
     grid-row: span 1;
 }
 
+/*-------------------------*/
 /* RESPONSIVENESS HANDLING */
+/*-------------------------*/
 
 @media (max-width: 768px) {
     .Name, .Introduction {
@@ -151,18 +177,6 @@
     .EmptyWelcomeGridItem {
         grid-column: span 0;
         display: none;
-    }
-}
-
-/* MOVING OUT ANIMATION */
-@keyframes moveOut {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(-50vw);
-        opacity: 0;
     }
 }
 

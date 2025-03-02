@@ -1,3 +1,7 @@
+/*-----------------------*/
+/* COMPONENT: Menu frame */
+/*-----------------------*/
+
 .MenuFrame {
     display: grid;
     grid-template-rows: 100vh;
@@ -6,6 +10,10 @@
     width: 90vw;
     height: 100vh;
 }
+
+/*-------------------------*/
+/* COMPONENT: Menu buttons */
+/*-------------------------*/
 
 .MenuButtons {
     display: grid;
@@ -82,7 +90,9 @@
     background-repeat: no-repeat;
 }
 
+/*-------------------------*/
 /* RESPONSIVENESS HANDLING */
+/*-------------------------*/
 
 @media (max-width: 768px) {
     .MenuButtons {
