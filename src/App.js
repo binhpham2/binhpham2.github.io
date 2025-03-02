@@ -8,25 +8,32 @@ import splashGif from './images/ink/splash.gif'
 import Employment from './components/employment/Employment';
 
 const App = () => {
+  // Handle animation and scrolling effects
   useEffect(() => {
-    // Disable scrolling by modifying the style of the html tag
+    /*-----------------------------*/
+    /* INK-SPLASH ANIMATION HANDLE */
+    /*-----------------------------*/
+    // Disable scrolling on reload so that ink-splash animation has enough time to finish...
     document.documentElement.style.overflow = "hidden";
 
-    // Enable scrolling after a few seconds
+    // ...Enable again scrolling in a few seconds after ink-splash animation almost finishes.
     setTimeout(() => {
         document.documentElement.style.overflow = "auto";
     }, 6000);
 
-    // Add animation
-    animateWelcome()
-
-    // Reload GIFs
+    // Reload GIFs so that ink-splash animation is rerun on reload.
     const element = document.querySelector(".FirstBackground");
     if (element) {
       const timestamp = new Date().getTime(); // Generate a unique timestamp
       element.style.maskImage = `url(${splashGif}?cacheBust=${timestamp})`;
       element.style.WebkitMaskImage = `url(${splashGif}?cacheBust=${timestamp})`; // For WebKit browsers
     }
+    
+    /*--------------------------*/
+    /* WELCOME SCROLL ANIMATION */
+    /*--------------------------*/
+    // Add animation for scrolling away from Welcome section.
+    animateWelcome()
 
   }, []);
 
