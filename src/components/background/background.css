@@ -1,6 +1,6 @@
-/*------------*/
-/* BACKGROUND */
-/*------------*/
+/*-----------------------*/
+/* ANIMATION: Background */
+/*-----------------------*/
 
 @keyframes backgroundFade {
     0% {
@@ -17,38 +17,9 @@
     }
 }
 
-.FirstBackground {
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top right;
-    z-index: 100;
-    animation-name: backgroundFade;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-
-    mask-image: url(../../images/ink/splash.gif);
-    mask-size: cover;
-    mask-position: center;
-}
-
-.BackgroundPreload {
-    z-index: -100;
-    height: 0px;
-    width: 0px;
-    position: fixed;
-    top: -100vh;
-    left: -100vw;
-}
-
-/*-------*/
-/* LEAFS */
-/*-------*/
+/*------------------*/
+/* ANIMATION: Leafs */
+/*------------------*/
 
 @keyframes leaf_falling {
     0% {
@@ -119,6 +90,43 @@
         transform: translateX(0vw) translateY(-5vh) rotateZ(0deg);
     }
 }
+
+/*------------------------*/
+/* COMPONENT: Backgrounds */
+/*------------------------*/
+
+.FirstBackground {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    z-index: 100;
+    animation-name: backgroundFade;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    mask-image: url(../../images/ink/splash.gif);
+    mask-size: cover;
+    mask-position: center;
+}
+
+.BackgroundPreload {
+    z-index: -100;
+    height: 0px;
+    width: 0px;
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+}
+
+/*------------------*/
+/* COMPONENT: Leafs */
+/*------------------*/
 
 .GreenLeafs, .OrangeLeafs {
     position: fixed;
