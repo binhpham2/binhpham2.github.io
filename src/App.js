@@ -10,6 +10,12 @@ import Employment from './components/employment/Employment';
 const App = () => {
   // Handle animation and scrolling effects
   useEffect(() => {
+    /*------------------*/
+    /* INITIAL SETTINGS */
+    /*------------------*/
+    // Make sure page is scrolled to top on reload
+    window.history.scrollRestoration = 'manual'
+
     /*-----------------------------*/
     /* INK-SPLASH ANIMATION HANDLE */
     /*-----------------------------*/
@@ -34,7 +40,6 @@ const App = () => {
     /*--------------------------*/
     // Add animation for scrolling away from Welcome section.
     animateWelcome()
-
   }, []);
 
   return (
