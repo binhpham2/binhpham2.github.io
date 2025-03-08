@@ -7,7 +7,7 @@
     height: fit-content;
     min-height: 90vh;
     top: 100vh;
-    z-index: 450;
+    z-index: 4500;
 }
 
 /*-----------------------------------------*/
@@ -32,15 +32,43 @@
     row-gap: 5vh;
 }
 
-.EmploymentYoESummary, .EmploymentTechSummary, .EmploymentHistory {
+.EmploymentYoESummary, .EmploymentTechSummary, .EmploymentHistoryCard {
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
     padding: 20px 5vw;
 }
 
+/* Employment History list */
 .EmploymentHistory {
-    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Employment History Card component */
+.EmploymentHistoryCard {
+    width: 25vw;
+    height: 10vh;
+    transition: 1.5s;
+    transition-timing-function: ease-in;
+    transform-style: preserve-3d;
+    margin: 20px 0;
+}
+
+/* First div of Employment History Card (title) */
+.EmploymentHistoryCard > div:nth-of-type(1) {
+    position: absolute;
+    transform: translate3d(0, 0, 50px);
+}
+
+/* Second div of Employment History Card (description) */
+.EmploymentHistoryCard > div:nth-of-type(2) {
+    transform: rotateY(180deg) translate3d(0, 0, 50px);
+}
+
+/* HOVERING on Employment History Card component */
+.EmploymentHistoryCard:hover {
+    transform: rotateY(-180deg);
 }
 
 /*-------------------------*/
