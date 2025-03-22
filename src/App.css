@@ -19,10 +19,24 @@ h1, h2, p {
 @media (max-width: 200px) {
     .App > p {
         display: block;
-        font-size: 8vw;
+        font-size: 2rem;
         color: white;
         z-index: 500;
         padding: 5vw;
+        text-align: center;
+    }
+
+    .App > div {
+        display: none;
+    }
+}
+
+@media (max-height: 300px) {
+    .App > p {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        z-index: 500;
         text-align: center;
     }
 
