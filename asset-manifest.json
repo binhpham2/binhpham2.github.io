@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3bdb8a66.css",
-    "main.js": "/static/js/main.f0ebf500.js",
+    "main.css": "/static/css/main.fe812e05.css",
+    "main.js": "/static/js/main.8ba80b76.js",
     "static/media/latern_3.png": "/static/media/latern_3.93a1f76bdbccc9ec0a3c.png",
     "static/media/latern_1.png": "/static/media/latern_1.1d595d8062b549699ec7.png",
     "static/media/latern_2.png": "/static/media/latern_2.69c3534723e50b6fe8ea.png",
@@ -9,11 +9,11 @@
     "static/media/green_leaf.png": "/static/media/green_leaf.9c1b1064c5c5df672efb.png",
     "static/media/orange_leaf.png": "/static/media/orange_leaf.23861c5fae1c3abafdd4.png",
     "index.html": "/index.html",
-    "main.3bdb8a66.css.map": "/static/css/main.3bdb8a66.css.map",
-    "main.f0ebf500.js.map": "/static/js/main.f0ebf500.js.map"
+    "main.fe812e05.css.map": "/static/css/main.fe812e05.css.map",
+    "main.8ba80b76.js.map": "/static/js/main.8ba80b76.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bdb8a66.css",
-    "static/js/main.f0ebf500.js"
+    "static/css/main.fe812e05.css",
+    "static/js/main.8ba80b76.js"
   ]
 }
