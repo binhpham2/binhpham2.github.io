@@ -16,6 +16,7 @@
 
 .Employment h1 {
     padding-top: 10vh;
+    text-shadow: 1px 1px 2px black;
 }
 
 /*-----------------------------------------*/
@@ -25,45 +26,88 @@
 /* Hide scrollbar for Chrome, Safari and Opera */
 .EmploymentHistory::-webkit-scrollbar {
     display: none;
-  }
+}
   
   /* Hide scrollbar for IE, Edge and Firefox */
-  .EmploymentHistory {
+.EmploymentHistory {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-  }
+}
 
 /* Employment History list */
 .EmploymentHistory {
+    width: 100%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     background-color: transparent;
     overflow-y: scroll;
+    padding: 1vh 0;
+    background-color: rgba(0, 255, 255, 0.249);
 }
+
+/*------------------------------------*/
+/* COMPONENT: Employment history card */
+/*------------------------------------*/
 
 /* Employment History Card component */
 .EmploymentHistoryCard {
     z-index: 900;
     color: white;
+    background-color: rgba(0, 0, 0, 0.7);
     width: 50vw;
     height: fit-content;
-    padding: 1vh;
     border: none;
-    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
-    transition: 0.5s;
+    transition: 0.2s;
     transition-timing-function: ease-in;
     margin: 2vh;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 2vw;
+}
+
+.EmploymentHistoryCard p:nth-of-type(1) {
+    width: 35%;
+    padding: 1vh 1vw;
+    margin: 0;
+}
+
+.EmploymentHistoryCard p:nth-of-type(2) {
+    width: 65%;
+    padding: 1vh 1vw;
+    margin: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 /* HOVERING on Employment History Card component */
 .EmploymentHistoryCard:hover {
-    transform: rotateY(0);
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /*-------------------------*/
 /* RESPONSIVENESS HANDLING */
 /*-------------------------*/
 
-/* Nothing yet */
+@media (max-width: 768px) {
+    .EmploymentHistoryCard {
+        width: 70vw;
+        flex-direction: column;
+    }
+    
+    .EmploymentHistoryCard p:nth-of-type(1) {
+        width: fit-content;
+    }
+
+    .EmploymentHistoryCard p:nth-of-type(2) {
+        width: fit-content;
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+    }
+}
