@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
     top: 100vh;
-    z-index: 900;
+    z-index: 450;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -15,8 +15,12 @@
 }
 
 .Employment h1 {
-    padding-top: 10vh;
-    text-shadow: 1px 1px 2px black;
+    padding: 2vh 4vw;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    text-decoration: underline;
 }
 
 /*-----------------------------------------*/
@@ -37,15 +41,32 @@
 /* Employment History list */
 .EmploymentHistory {
     width: 100%;
-    height: 50vh;
+    height: 30vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     background-color: transparent;
     overflow-y: scroll;
-    padding: 1vh 0;
-    background-color: rgba(0, 255, 255, 0.249);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*------------------------------------*/
+/* ANIMATION: Employment history card */
+/*------------------------------------*/
+/* Find how much the whole history component (containing all cards) larger than the whole view width. */
+/* That difference is the amount to translate. */
+/* Formula for finding difference: view width - (card width + card side margin * 2) * number of cards. */
+@keyframes employmentCardMove {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: translateX(calc(100vw - (20vw + 4vw * 2) * 6)); 
+    }
+    100% {
+        transform: none;
+    }
 }
 
 /*------------------------------------*/
@@ -54,41 +75,43 @@
 
 /* Employment History Card component */
 .EmploymentHistoryCard {
-    z-index: 900;
+    z-index: 450;
     color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 50vw;
+    background-color: rgba(0, 0, 0, 0);
+    width: fit-content;
     height: fit-content;
     border: none;
     border-radius: 20px;
     transition: 0.2s;
     transition-timing-function: ease-in;
-    margin: 2vh;
+    margin: 4vw;
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 1vh 2vw;
+    animation: employmentCardMove 10s ease-in-out infinite;
 }
 
-.EmploymentHistoryCard p:nth-of-type(1) {
-    width: 35%;
-    padding: 1vh 1vw;
-    margin: 0;
+/* Employment company logo */
+.EmploymentCompanyLogo {
+    width: 20vw;
+    height: 15vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: 0.2s;
 }
 
-.EmploymentHistoryCard p:nth-of-type(2) {
-    width: 65%;
-    padding: 1vh 1vw;
-    margin: 0;
-    border-left: 1px solid rgba(255, 255, 255, 0.7);
-}
-
-/* HOVERING on Employment History Card component */
 .EmploymentHistoryCard:hover {
     cursor: pointer;
-    transform: scale(1.1);
+}
+
+.EmploymentHistoryCard:hover .EmploymentCompanyLogo {
+    transform: scale(1.2);
+    opacity: 1;
 }
 
 /*-------------------------*/
