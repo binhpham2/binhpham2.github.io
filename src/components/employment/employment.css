@@ -62,7 +62,7 @@
         transform: none;
     }
     50% {
-        transform: translateX(calc(100vw - (20vw + 4vw * 2) * 6)); 
+        transform: translateX(calc(100vw - (20vw + 4vw * 2) * 5)); 
     }
     100% {
         transform: none;

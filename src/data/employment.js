@@ -43,6 +43,7 @@ export const employments = [
             }
         ]
     },
+    /*
     {
         'company': 'Aalto University',
         'time': 'Apr 2021 - Jun 2021',
@@ -53,6 +54,7 @@ export const employments = [
             }
         ]
     },
+    */
     {
         'company': 'Upwork',
         'time': 'Feb 2021 - Mar 2021',
