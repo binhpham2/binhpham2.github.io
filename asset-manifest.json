@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.4fc3684e.css",
+    "main.css": "/static/css/main.ac6ec4ca.css",
     "main.js": "/static/js/main.78b9c5fe.js",
     "static/media/latern_3.png": "/static/media/latern_3.93a1f76bdbccc9ec0a3c.png",
     "static/media/latern_1.png": "/static/media/latern_1.1d595d8062b549699ec7.png",
@@ -9,11 +9,11 @@
     "static/media/green_leaf.png": "/static/media/green_leaf.9c1b1064c5c5df672efb.png",
     "static/media/orange_leaf.png": "/static/media/orange_leaf.23861c5fae1c3abafdd4.png",
     "index.html": "/index.html",
-    "main.4fc3684e.css.map": "/static/css/main.4fc3684e.css.map",
+    "main.ac6ec4ca.css.map": "/static/css/main.ac6ec4ca.css.map",
     "main.78b9c5fe.js.map": "/static/js/main.78b9c5fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fc3684e.css",
+    "static/css/main.ac6ec4ca.css",
     "static/js/main.78b9c5fe.js"
   ]
 }
