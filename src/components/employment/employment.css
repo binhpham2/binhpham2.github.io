@@ -58,15 +58,16 @@
 /* Find how much the whole history component (containing all cards) larger than the whole view width. */
 /* That difference is the amount to translate. */
 /* Formula for finding difference: view width - (card width + card side margin * 2) * number of cards - history container side margin * 2. */
+/* The movement range is: (history container side margin, view width - (card width + card side margin * 2) * number of cards - history container side margin). */
 @keyframes employmentCardMove {
     0% {
-        transform: none;
+        transform: translateX(2vw);
     }
     50% {
-        transform: translateX(calc(100vw - (20vw + 4vw * 2) * 6 - 2vw * 2)); 
+        transform: translateX(calc(100vw - (20vw + 4vw * 2) * 6 - 2vw)); 
     }
     100% {
-        transform: none;
+        transform: translateX(2vw);
     }
 }
 
