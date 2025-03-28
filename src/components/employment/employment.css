@@ -1,3 +1,66 @@
+/*------------------------------------*/
+/* ANIMATION: Employment history card */
+/*------------------------------------*/
+
+/* 
+History list length
+= (card width + card side margin * 2) * number of cards
+= (20vw + 4vw * 2) * 6
+*/
+
+/*
+FIRST TYPE: 
+- Starting from its inital position (left: 0), translate horizontally its full length.
+- Move to after the second type (while being transparent).
+- Translate the full length of second type (same as its own length) to achieve starting state.
+These 3 phases are not equally divided. 
+Phase 1 and 3 should be equal, but phase 2 should be as short as possible.
+Also have to take into account the distance that second type travels while first move to after second type.
+*/
+@keyframes firstTypeEmploymentHistoryCardMove {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(calc((20vw + 4vw * 2) * 6 * (-1)));
+        opacity: 1;
+    }
+    50.33% {
+        transform: translateX(calc((20vw + 4vw * 2) * 6 * (-1)));
+        opacity: 0;
+    }
+    50.66% {
+        transform: translateX(calc((20vw + 4vw * 2) * 6 * 49 / 50));
+        opacity: 0;
+    }
+    51% {
+        transform: translateX(calc((20vw + 4vw * 2) * 6 * 49 / 50));
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* SECOND TYPE: */
+
+@keyframes secondTypeEmploymentHistoryCardMove {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(calc((20vw + 4vw * 2) * 6 * (-1)));
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(calc((20vw + 4vw * 2) * 6 * (-2)));
+        opacity: 1;
+    }
+}
+
 /*-------------------------------------------*/
 /* COMPONENT: Employment outermost container */
 /*-------------------------------------------*/
@@ -9,7 +72,6 @@
     /* Dimension */
     width: 100vw;
     height: 100vh;
-    top: 100vh;
     z-index: 450;
     display: flex;
     flex-direction: column;
@@ -45,7 +107,6 @@
 .EmploymentHistory {
     width: 100%;
     height: 30vh;
-    padding: 0 2vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -55,23 +116,15 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/*------------------------------------*/
-/* ANIMATION: Employment history card */
-/*------------------------------------*/
-/* Find how much the whole history component (containing all cards) larger than the whole view width. */
-/* That difference is the amount to translate. */
-/* Formula for finding difference: view width - (card width + card side margin * 2) * number of cards - history container side margin * 2. */
-/* The movement range is: (history container side margin, view width - (card width + card side margin * 2) * number of cards - history container side margin). */
-@keyframes employmentCardMove {
-    0% {
-        transform: translateX(2vw);
-    }
-    50% {
-        transform: translateX(calc(100vw - (20vw + 4vw * 2) * 6 - 2vw)); 
-    }
-    100% {
-        transform: translateX(2vw);
-    }
+/*--------------------------------------------*/
+/* COMPONENT: Employment history cards stacks */
+/*--------------------------------------------*/
+.FirstTypeEmploymentHistoryCard {
+    animation: firstTypeEmploymentHistoryCardMove 14s linear infinite;
+}
+
+.SecondTypeEmploymentHistoryCard {
+    animation: secondTypeEmploymentHistoryCardMove 14s linear infinite;
 }
 
 /*------------------------------------*/
@@ -95,7 +148,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    animation: employmentCardMove 12s linear infinite;
 }
 
 /* Employment company logo */
@@ -123,19 +175,4 @@
 /* RESPONSIVENESS HANDLING */
 /*-------------------------*/
 
-@media (max-width: 768px) {
-    .EmploymentHistoryCard {
-        width: 70vw;
-        flex-direction: column;
-    }
-    
-    .EmploymentHistoryCard p:nth-of-type(1) {
-        width: fit-content;
-    }
-
-    .EmploymentHistoryCard p:nth-of-type(2) {
-        width: fit-content;
-        border: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.7);
-    }
-}
+/* Nothing yet. */

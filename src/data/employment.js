@@ -14,6 +14,16 @@ export const employments = [
         ]
     },
     {
+        'company': 'Slush',
+        'time': 'Sep 2023 - Dec 2023',
+        'positions': [
+            {
+                'title': 'Junior Software Engineer',
+                'time': 'Sep 2023 - Dec 2023',
+            }
+        ]
+    },
+    {
         'company': 'ABB',
         'time': 'Jan 2023 - Aug 2023',
         'positions': [
@@ -50,16 +60,6 @@ export const employments = [
             {
                 'title': 'Teaching Assistant',
                 'time': 'Apr 2021 - Jun 2021',
-            }
-        ]
-    },
-    {
-        'company': 'Upwork',
-        'time': 'Feb 2021 - Mar 2021',
-        'positions': [
-            {
-                'title': 'Game Developer',
-                'time': 'Feb 2021 - Mar 2021',
             }
         ]
     },

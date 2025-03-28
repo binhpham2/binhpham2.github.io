@@ -4,9 +4,9 @@ import abbLogo from '../../images/logos/abb.png'
 import elisaLogo from '../../images/logos/elisa.png'
 import futuriceLogo from '../../images/logos/futurice.png'
 import aaltoLogo from '../../images/logos/aalto.png'
-import upworkLogo from '../../images/logos/upwork.png'
+import slushLogo from '../../images/logos/slush.png'
 
-const EmploymentHistoryCard = ({ employment }) => {
+const EmploymentHistoryCard = ({ employment, type }) => {
 
     const companyLogos = {
         'KONE': koneLogo,
@@ -14,15 +14,15 @@ const EmploymentHistoryCard = ({ employment }) => {
         'Elisa': elisaLogo,
         'Futurice': futuriceLogo,
         'Aalto University': aaltoLogo,
-        'Upwork': upworkLogo
+        'Slush': slushLogo
     }
 
     return (
-        <div className='EmploymentHistoryCard'>
+        <div className={`EmploymentHistoryCard ${type}`}>
             <img 
                 src={companyLogos[employment.company]} 
                 alt={employment.company} 
-                className='EmploymentCompanyLogo' 
+                className='EmploymentCompanyLogo'
             />
         </div>
     )

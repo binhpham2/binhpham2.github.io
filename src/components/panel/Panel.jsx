@@ -40,7 +40,7 @@ const Panel = () => {
         <div className="Panel">
             {components.map(
                 component => (
-                    <div className={currentViewedPanel === component ? 'ViewedPanel' : ''}>
+                    <div key={component} className={currentViewedPanel === component ? 'ViewedPanel' : ''}>
                         <button onClick={findPanelClickHandler(component)}>
                             <p>{component}</p>
                         </button>
