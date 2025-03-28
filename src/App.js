@@ -34,11 +34,6 @@ const App = () => {
       element.style.maskImage = `url(${splashGif}?cacheBust=${timestamp})`;
       element.style.WebkitMaskImage = `url(${splashGif}?cacheBust=${timestamp})`; // For WebKit browsers
     }
-    
-    /*--------------------------*/
-    /* WELCOME SCROLL ANIMATION */
-    /*--------------------------*/
-    // Add animation for scrolling away from Welcome section.
   }, []);
 
   return (

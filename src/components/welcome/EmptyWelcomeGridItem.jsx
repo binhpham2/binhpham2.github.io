@@ -2,8 +2,7 @@ import './welcome.css'
 
 const EmptyWelcomeGridItem = () => {
     return (
-        <div className='EmptyWelcomeGridItem'>
-        </div>
+        <div className='EmptyWelcomeGridItem'></div>
     );
 }
 

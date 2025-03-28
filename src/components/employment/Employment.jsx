@@ -1,15 +1,13 @@
 import './employment.css'
 import EmploymentHistory from './EmploymentHistory'
 
-/*--------------------------------
-Component structure:
-
-Employment
-    h1 (text "Employment")
-    EmploymentHistory
-        EmploymentHistoryCard
---------------------------------*/
-
+/*
+------------------
+EMPLOYMENT SECTION
+------------------
+Contains all info about work experiences.
+Should have a title, and a list of employment records (history).
+*/
 const Employment = () => {
     return (
         <div className='Employment'>
