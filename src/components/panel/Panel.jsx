@@ -20,7 +20,7 @@ const Panel = () => {
                 <button><p>P</p></button>
             </div>
             <div>
-                <button><p>Certifications</p></button>
+                <button><p>Contacts</p></button>
                 <button><p>C</p></button>
             </div>    
         </div>

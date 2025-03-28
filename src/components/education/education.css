@@ -1,0 +1,19 @@
+.Education {
+    /* Scrolling setup */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    /* Dimension */
+    width: 100vw;
+    height: 100vh;
+    top: 200vh;
+    z-index: 550;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: blue;
+}
+
+.EducationCard {
+
+}

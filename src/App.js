@@ -3,9 +3,9 @@ import Background from './components/background/Background'
 import Welcome from './components/welcome/Welcome'
 import Panel from './components/panel/Panel';
 import { useEffect } from 'react'
-import { animateWelcome } from './scripts/animation';
 import splashGif from './images/ink/splash.gif'
 import Employment from './components/employment/Employment';
+import Education from './components/education/Education';
 
 const App = () => {
   // Handle animation and scrolling effects
@@ -39,7 +39,6 @@ const App = () => {
     /* WELCOME SCROLL ANIMATION */
     /*--------------------------*/
     // Add animation for scrolling away from Welcome section.
-    animateWelcome()
   }, []);
 
   return (
@@ -66,7 +65,7 @@ const App = () => {
       {/* Employment summary and history. */}
       <Employment />
       {/* Education. */}
-      <></>
+      <Education />
       {/* Projects. */}
       <></>
       {/* Certificates. */}
