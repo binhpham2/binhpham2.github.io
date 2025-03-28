@@ -1,28 +1,41 @@
+import { useEffect } from 'react'
 import './panel.css'
+import { useState } from 'react'
 
 const Panel = () => {
+
+    const components = ['Welcome', 'Employment', 'Education', 'Projects', 'Contacts']
+    const [currentViewedPanel, setCurrentViewedPanel] = useState(components[0])
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            const targetViewedComponent = components[Math.round(window.scrollY / window.innerHeight)]
+            setCurrentViewedPanel(targetViewedComponent)
+        })
+    }, [])
+
+    const findPanelClickHandler = (componentClass) => {
+        const handlePanelClick = () => {
+            const targetComponent = document.querySelector(`.${componentClass}`)
+            targetComponent.scrollIntoView({ behavior: "smooth" })
+        }
+        return handlePanelClick
+    }
+
     return (
         <div className="Panel">
-            <div>
-                <button><p>Home</p></button>
-                <button><p>H</p></button>
-            </div>
-            <div>
-                <button><p>Employment</p></button>
-                <button><p>Em</p></button>
-            </div>
-            <div>
-                <button><p>Education</p></button>
-                <button><p>Ed</p></button>
-            </div>
-            <div>
-                <button><p>Projects</p></button>
-                <button><p>P</p></button>
-            </div>
-            <div>
-                <button><p>Contacts</p></button>
-                <button><p>C</p></button>
-            </div>    
+            {components.map(
+                component => (
+                    <div className={currentViewedPanel === component ? 'ViewedPanel' : ''}>
+                        <button onClick={findPanelClickHandler(component)}>
+                            <p>{component}</p>
+                        </button>
+                        <button onClick={findPanelClickHandler(component)}>
+                            <p>{component[0]}</p>
+                        </button>
+                    </div>
+                )
+            )}
         </div>
     )
 }

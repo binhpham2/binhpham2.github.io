@@ -80,6 +80,11 @@
     display: none;
 }
 
+.ViewedPanel > button {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    border-bottom: 10px solid white !important;
+}
+
 /*-------------------------*/
 /* RESPONSIVENESS HANDLING */
 /*-------------------------*/

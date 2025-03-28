@@ -1,4 +1,21 @@
 /*
+------------------
+LIST OF COMPONENTS
+------------------
+*/
+const components = ['Welcome', 'Employment', 'Education']
+
+/*
+----------------------------------
+HIGHLIGHT THE CURRENT VIEWED PANEL
+----------------------------------
+Find the current viewed panel.
+*/
+export const highlightViewedPanel = () => {
+    const currentViewedComponent = components[Math.round(window.scrollY / window.innerHeight)]
+}
+
+/*
 -------------------------------------------
 AUTO-SCROLL TO THE NEXT OR PREVIOUS SECTION
 -------------------------------------------
@@ -10,9 +27,6 @@ B. If the scroll is upwards:
     Same as A.
 */
 export const autoScroll = (disableAutoScroll) => {
-    // List of components
-    const components = ['Welcome', 'Employment', 'Education']
-
     // Find target component.
     const findTargetComponent = (current, direction) => {
         // Find the index of the current viewed component in the above list.
