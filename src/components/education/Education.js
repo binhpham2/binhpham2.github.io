@@ -1,9 +1,11 @@
 import './education.css'
+import EducationHistory from './EducationHistory'
 
 const Education = () => {
     return (
         <div className='Education'>
-            HIHI
+            <h1>Education</h1>
+            <EducationHistory />
         </div>
     )
 }
