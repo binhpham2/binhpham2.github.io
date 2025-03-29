@@ -1,9 +1,9 @@
 import './education.css'
 
-const EducationHistoryCard = () => {
+const EducationHistoryCard = ({ record }) => {
     return (
         <div className='EducationHistoryCard'>
-
+            <p>{record.degree}</p>
         </div>
     )
 }
