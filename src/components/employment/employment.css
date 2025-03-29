@@ -3,19 +3,23 @@
 /*------------------------------------*/
 
 /* 
-History list length
+History List Length (HLL)
 = (card width + card side margin * 2) * number of cards
 = (20vw + 4vw * 2) * 6
 */
 
 /*
 FIRST TYPE: 
-- Starting from its inital position (left: 0), translate horizontally its full length.
-- Move to after the second type (while being transparent).
-- Translate the full length of second type (same as its own length) to achieve starting state.
-These 3 phases are not equally divided. 
-Phase 1 and 3 should be equal, but phase 2 should be as short as possible.
-Also have to take into account the distance that second type travels while first move to after second type.
+1. Starts at its inital position (left: 0)
+2. Moves HLL pixels.
+3. Becomes transparent.
+4. Moves to after the second type.
+5. Moves back to its initial position.
+6. Repeat.
+
+Note: Step 4 happens while the second type is still moving.
+Therefore, to make sure the first type comes right after the second one,
+it has to be translated to the full HLL minus the amount the second type has moved.
 */
 @keyframes firstTypeEmploymentHistoryCardMove {
     0% {
@@ -44,8 +48,13 @@ Also have to take into account the distance that second type travels while first
     }
 }
 
-/* SECOND TYPE: */
-
+/* 
+SECOND TYPE: 
+1. Starts at its initial position (HLL pixels).
+2. Moves HLL pixels.
+3. Moves HLL pixels, again.
+4. Repeat.
+*/
 @keyframes secondTypeEmploymentHistoryCardMove {
     0% {
         transform: translateX(0px);
