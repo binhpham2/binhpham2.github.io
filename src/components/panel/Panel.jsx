@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import './panel.css'
 import { useState } from 'react'
+import { components } from '../../data/sections'
 
 /*
 ----------------
@@ -10,9 +11,6 @@ Contains child panels to indicate where the user currently is.
 Quickly navigate to the target section.
 */
 const Panel = () => {
-    // List of main sections (component) in the portfolio.
-    const components = ['Welcome', 'Employment', 'Education', 'Projects', 'Contacts']
-
     // The current section that is being viewed.
     const [currentViewedPanel, setCurrentViewedPanel] = useState(components[0])
 
