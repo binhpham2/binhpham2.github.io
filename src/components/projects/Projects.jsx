@@ -1,14 +1,26 @@
 import './projects.css'
 import { projects } from '../../data/projects'
 import ProjectCard from './ProjectCard'
+import { useState } from 'react'
 
 const Projects = () => {
+
+    // Which card is being hovered?
+    const [cardHovered, setCardHovered] = useState(null)
+
     return (
         <div className='Projects'>
             <h1>Projects</h1>
             <div className='ProjectsList'>
                 {projects.map(
-                    project => <ProjectCard key={project.name} project={project} />
+                    project => { return (
+                        <ProjectCard 
+                            key={project.name} 
+                            project={project} 
+                            cardHovered={cardHovered} 
+                            setCardHovered={setCardHovered} 
+                        />
+                    )}
                 )}
             </div>
         </div>

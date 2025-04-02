@@ -42,6 +42,38 @@
     overflow: hidden;
     width: 20%;
     height: 50vh;
+    transition: 0.8s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ProjectCardShrink {
+    width: 5%;
+}
+
+.ProjectCardExpand {
+    width: 65%;
+}
+
+.ProjectCard:hover {
+    cursor: pointer;
+}
+
+.ProjectCard:nth-of-type(1) {
+    background-image: url('../../images/project/buffalo_1.png');
+}
+
+.ProjectCard:nth-of-type(2) {
+    background-image: url('../../images/project/buffalo_2.png');
+}
+
+.ProjectCard:nth-of-type(3) {
+    background-image: url('../../images/project/buffalo_3.png');
+}
+
+.ProjectCard:nth-of-type(4) {
+    background-image: url('../../images/project/buffalo_4.png');
 }
 
 .ProjectCard p {
