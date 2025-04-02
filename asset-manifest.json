@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.9ee48c28.css",
-    "main.js": "/static/js/main.f40816da.js",
+    "main.css": "/static/css/main.f42da5ac.css",
+    "main.js": "/static/js/main.4bd0fe9c.js",
     "static/media/latern_3.png": "/static/media/latern_3.93a1f76bdbccc9ec0a3c.png",
     "static/media/latern_1.png": "/static/media/latern_1.1d595d8062b549699ec7.png",
     "static/media/latern_2.png": "/static/media/latern_2.69c3534723e50b6fe8ea.png",
     "static/media/splash.gif": "/static/media/splash.8d8a035159e414d0c90e.gif",
+    "static/media/buffalo_2.png": "/static/media/buffalo_2.81005af6d0ad94be9f17.png",
+    "static/media/buffalo_3.png": "/static/media/buffalo_3.7141a532d382996e4aaa.png",
     "static/media/green_leaf.png": "/static/media/green_leaf.9c1b1064c5c5df672efb.png",
+    "static/media/buffalo_1.png": "/static/media/buffalo_1.e463160b8ec6c121a941.png",
+    "static/media/buffalo_4.png": "/static/media/buffalo_4.efacf3dbd543dff0e924.png",
     "static/media/orange_leaf.png": "/static/media/orange_leaf.23861c5fae1c3abafdd4.png",
     "index.html": "/index.html",
-    "main.9ee48c28.css.map": "/static/css/main.9ee48c28.css.map",
-    "main.f40816da.js.map": "/static/js/main.f40816da.js.map"
+    "main.f42da5ac.css.map": "/static/css/main.f42da5ac.css.map",
+    "main.4bd0fe9c.js.map": "/static/js/main.4bd0fe9c.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ee48c28.css",
-    "static/js/main.f40816da.js"
+    "static/css/main.f42da5ac.css",
+    "static/js/main.4bd0fe9c.js"
   ]
 }
