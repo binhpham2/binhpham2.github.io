@@ -48,18 +48,6 @@
     background-position: center;
 }
 
-.ProjectCardShrink {
-    width: 5%;
-}
-
-.ProjectCardExpand {
-    width: 65%;
-}
-
-.ProjectCard:hover {
-    cursor: pointer;
-}
-
 .ProjectCard:nth-of-type(1) {
     background-image: url('../../images/project/buffalo_1.png');
 }
@@ -74,6 +62,19 @@
 
 .ProjectCard:nth-of-type(4) {
     background-image: url('../../images/project/buffalo_4.png');
+}
+
+.ProjectCard:hover {
+    cursor: pointer;
+    background-image: none;
+}
+
+.ProjectCardShrink {
+    width: 5%;
+}
+
+.ProjectCardExpand {
+    width: 65%;
 }
 
 .ProjectCard p {
