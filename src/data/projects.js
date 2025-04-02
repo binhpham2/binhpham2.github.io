@@ -22,5 +22,23 @@ export const projects = [
         description: '',
         stack: ['Python', 'TensorFlow'],
         link: 'https://github.com/pdtbinh/Style_transfer'
+    },
+    {
+        name: 'Style Transfer 2',
+        description: '',
+        stack: ['Python', 'TensorFlow'],
+        link: 'https://github.com/pdtbinh/Style_transfer'
+    },
+    {
+        name: 'Style Transfer 3',
+        description: '',
+        stack: ['Python', 'TensorFlow'],
+        link: 'https://github.com/pdtbinh/Style_transfer'
+    },
+    {
+        name: 'Style Transfer 4',
+        description: '',
+        stack: ['Python', 'TensorFlow'],
+        link: 'https://github.com/pdtbinh/Style_transfer'
     }
 ]

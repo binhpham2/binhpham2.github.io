@@ -30,6 +30,23 @@
     padding: 5vh 2vw;
 }
 
+/* 
+FOR NORMAL AND SMALLER SCREEN SIZE (<1025px):
+    Total occupied length (no margin) is: 77% 
+    Therefore, length of each card is: 77% / 7 = 11%
+    Total length, including margin is: 77% + 1% * 2 * 7 = 91%
+
+    On shrink, card is 4%.
+    On expansion, card is 77% - (4% * 6) = 77% - 24% = 53%
+
+FOR LARGE SCREEN SIZES (>=1025px):
+    Total occupied length (no margin) is: 49%
+    Therefore, length of each card is: 49% / 7 = 7%
+    Total length, including margin is: 49% + 0.5% * 2 * 7 = 56%
+    
+    On shrink, card is 3%.
+    On expansion, card is 49% - (3% * 6) = 49% - 18% = 31%
+*/
 .ProjectCard {
     display: flex;
     flex-direction: column;
@@ -40,28 +57,40 @@
     padding: 0;
     margin: 0 1vw;
     overflow: hidden;
-    width: 20%;
+    width: 11%;
     height: 50vh;
     transition: 0.8s;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
 }
 
 .ProjectCard:nth-of-type(1) {
-    background-image: url('../../images/project/buffalo_1.png');
+    background-image: url('../../images/project/dragon_1.png');
 }
 
 .ProjectCard:nth-of-type(2) {
-    background-image: url('../../images/project/buffalo_2.png');
+    background-image: url('../../images/project/dragon_2.png');
 }
 
 .ProjectCard:nth-of-type(3) {
-    background-image: url('../../images/project/buffalo_3.png');
+    background-image: url('../../images/project/dragon_3.png');
 }
 
 .ProjectCard:nth-of-type(4) {
-    background-image: url('../../images/project/buffalo_4.png');
+    background-image: url('../../images/project/dragon_4.png');
+}
+
+.ProjectCard:nth-of-type(5) {
+    background-image: url('../../images/project/dragon_5.png');
+}
+
+.ProjectCard:nth-of-type(6) {
+    background-image: url('../../images/project/dragon_6.png');
+}
+
+.ProjectCard:nth-of-type(7) {
+    background-image: url('../../images/project/dragon_7.png');
 }
 
 .ProjectCard:hover {
@@ -70,11 +99,11 @@
 }
 
 .ProjectCardShrink {
-    width: 5%;
+    width: 4%;
 }
 
 .ProjectCardExpand {
-    width: 65%;
+    width: 53%;
 }
 
 .ProjectCard p {
@@ -85,4 +114,23 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/*-------------------------*/
+/* RESPONSIVENESS HANDLING */
+/*-------------------------*/
+
+@media (min-width: 1025px) {
+    .ProjectCard {
+        width: 7%;
+        margin: 0 0.5vw;
+    }
+
+    .ProjectCardShrink {
+        width: 3%;
+    }
+
+    .ProjectCardExpand {
+        width: 31%;
+    }
 }
