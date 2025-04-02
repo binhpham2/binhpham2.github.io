@@ -1,9 +1,9 @@
 import './projects.css'
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }) => {
     return (
         <div className='ProjectCard'>
-
+            
         </div>
     )
 }

@@ -1,0 +1,55 @@
+.Projects {
+    /* Scrolling setup */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    /* Dimension */
+    width: 100vw;
+    height: 100vh;
+    z-index: 450;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Projects h1 {
+    padding: 2vh 4vw;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+}
+
+.ProjectsList {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 5vh 2vw;
+}
+
+.ProjectCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 0;
+    margin: 0 1vw;
+    overflow: hidden;
+    width: 20%;
+    height: 50vh;
+}
+
+.ProjectCard p {
+    width: fit-content;
+    text-align: center;
+    padding: 0;
+    margin: 1vh 1vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

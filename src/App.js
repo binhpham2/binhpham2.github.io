@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import splashGif from './images/ink/splash.gif'
 import Employment from './components/employment/Employment';
 import Education from './components/education/Education';
+import Projects from './components/projects/Projects';
 
 const App = () => {
   // Handle animation and scrolling effects
@@ -62,7 +63,7 @@ const App = () => {
       {/* Education. */}
       <Education />
       {/* Projects. */}
-      <></>
+      <Projects />
       {/* Certificates. */}
       <></>
     </div>
