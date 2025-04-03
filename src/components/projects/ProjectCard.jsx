@@ -5,7 +5,7 @@ const ProjectCard = ({ project, cardHovered, setCardHovered }) => {
 
     const findProjectCardClass = (cardHoveredInput, projectName) => {
         if (!cardHoveredInput) {
-            return null
+            return ''
         }
         else if (cardHoveredInput === projectName) {
             return 'ProjectCardExpand'
@@ -33,6 +33,13 @@ const ProjectCard = ({ project, cardHovered, setCardHovered }) => {
             className={`ProjectCard ${findProjectCardClass(cardHovered, project.name)}`} 
             ref={projectCardRef}
         >
+            <div className='ProjectCardContent'>
+                <h2>{project.name}</h2>
+                <p><span>Description:</span> {project.description}</p>
+                { project.note ? <p><span>Note:</span> {project.note}</p> : null }
+                <p><span>Stack:</span> {project.stack}</p>
+                <p><span>Source code:</span> <a href={project.link} target="_blank" rel="noopener noreferrer">Click here to view Git repo.</a></p>
+            </div>
         </div>
     )
 }

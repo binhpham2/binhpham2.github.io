@@ -94,7 +94,6 @@ FOR LARGE SCREEN SIZES (>=1025px):
 }
 
 .ProjectCard:hover {
-    cursor: pointer;
     background-image: none;
 }
 
@@ -106,14 +105,53 @@ FOR LARGE SCREEN SIZES (>=1025px):
     width: 53%;
 }
 
-.ProjectCard p {
-    width: fit-content;
+/* Hide scrollbar for Chrome, Safari and Opera */
+.ProjectCardContent::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.ProjectCardContent {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.ProjectCardContent {
+    display: none;
+}
+
+.ProjectCard:hover .ProjectCardContent {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    width: 100%;
+    height: fit-content;
+    padding: 1vh 3vw;
+}
+
+.ProjectCardContent p {
     text-align: center;
-    padding: 0;
-    margin: 1vh 1vw;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 1vh 1vw;
+    margin: 0;
+}
+
+.ProjectCardContent h2 {
+    text-align: center;
+}
+
+.ProjectCardContent span {
+    text-decoration: underline;
+}
+
+.ProjectCardContent a {
+    text-decoration: none;
+    color: white;
+    padding: 1vh 1vw;
+}
+
+.ProjectCardContent a:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
 }
 
 /*-------------------------*/
