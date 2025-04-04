@@ -38,7 +38,7 @@ const ProjectCard = ({ project, cardHovered, setCardHovered }) => {
                 <p><span>Description:</span> {project.description}</p>
                 { project.note ? <p><span>Note:</span> {project.note}</p> : null }
                 <p><span>Stack:</span> {project.stack}</p>
-                <p><span>Source code:</span> <a href={project.link} target="_blank" rel="noopener noreferrer">View</a></p>
+                <p><a href={project.link} target="_blank" rel="noopener noreferrer">View code</a></p>
             </div>
         </div>
     )

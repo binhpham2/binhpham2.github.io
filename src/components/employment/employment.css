@@ -193,12 +193,11 @@ SECOND TYPE:
     z-index: 475;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
 .EmploymentContentBoard {
-    margin-top: 15vh;
     width: 50%;
     height: 70%;
     display: flex;
@@ -245,17 +244,20 @@ SECOND TYPE:
 }
 
 .EmploymentContentBoard div:last-child p {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    color: black;
     font-weight: bold;
     padding: 1vh 2vw;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
     transition: 0.2s;
 }
 
 .EmploymentContentBoard div:last-child p:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    border: 2px solid rgb(255, 255, 255, 0);
 }
 
 /*-------------------------*/

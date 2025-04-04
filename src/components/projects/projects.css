@@ -145,13 +145,20 @@ FOR LARGE SCREEN SIZES (>=1025px):
 
 .ProjectCardContent a {
     text-decoration: none;
-    color: white;
+    font-weight: bold;
     padding: 1vh 1vw;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 0.2s;
 }
 
 .ProjectCardContent a:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    border: 2px solid rgb(255, 255, 255, 0);
 }
 
 /*-------------------------*/
