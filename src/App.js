@@ -2,13 +2,17 @@ import './App.css';
 import Background from './components/background/Background'
 import Welcome from './components/welcome/Welcome'
 import Panel from './components/panel/Panel';
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import splashGif from './images/ink/splash.gif'
 import Employment from './components/employment/Employment';
 import Education from './components/education/Education';
 import Projects from './components/projects/Projects';
+import { components } from './data/sections';
 
 const App = () => {
+
+  const [currentViewedSection, setCurrentViewedSection] = useState(components[0])
+
   // Handle animation and scrolling effects
   useEffect(() => {
     /*------------------*/
@@ -49,23 +53,22 @@ const App = () => {
       {/* PERSISTING VIEW */}
       {/*-----------------*/}
       {/* Menu of buttons on top of the screen for navigation assistance. */}
-      <Panel />
+      <Panel currentViewedSection={currentViewedSection} setCurrentViewedSection={setCurrentViewedSection} />
       {/* Animated sumi-e background and animated leafs. */}
       <Background />
 
       {/*--------------*/}
       {/* CONTENT VIEW */}
       {/*--------------*/}
-      {/* Name and a brief self-introduction. */}
-      <Welcome />
-      {/* Employment summary and history. */}
-      <Employment />
-      {/* Education. */}
-      <Education />
-      {/* Projects. */}
-      <Projects />
-      {/* Certificates. */}
-      <></>
+      {/* Unlike other sections, Welcome is loaded once, and never removed. Reason is specified in ./components/welcome/Welcome.jsx */}
+      <Welcome currentViewedSection={currentViewedSection}/>
+      {/* View only one section at a time. */}
+      { 
+        (currentViewedSection === 'Employment') ? <Employment /> 
+        : (currentViewedSection === 'Education') ? <Education /> 
+        : (currentViewedSection === 'Projects') ? <Projects />
+        : null 
+      }
     </div>
   );
 }
