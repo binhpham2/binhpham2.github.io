@@ -1,9 +1,12 @@
 import './education.css'
 import aaltoLogo from '../../images/logos/aalto.png'
 
-const EducationHistoryCard = ({ record }) => {
+const EducationHistoryCard = ({ record, setViewedRecord }) => {
     return (
-        <div className='EducationHistoryCard'>
+        <div 
+            className='EducationHistoryCard' 
+            onClick={() => setViewedRecord(record)}
+        >
             <img src={aaltoLogo} alt='Aalto Logo' />
             <div>
                 <p>{record.school}</p>

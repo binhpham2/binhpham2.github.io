@@ -89,6 +89,87 @@
     opacity: 1;
 }
 
+/*------------------------------*/
+/* COMPONENT: Education content */
+/*------------------------------*/
+
+.EducationContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    z-index: 475;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.EducationContentBoard {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    padding: 2vh 5vw;
+    overflow: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.EducationContentBoard::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.EducationContentBoard {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.EducationContentBoard h2 {
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    padding: 1vh 0;
+    margin: 1vh 0;
+    border-bottom: 1px solid white;
+}
+
+.EducationContentBoard span {
+    text-decoration: underline;
+}
+
+.EducationContentBoard div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid white;
+    margin-top: 1vh;
+}
+
+.EducationContentBoard div:last-child p {
+    font-weight: bold;
+    padding: 1vh 2vw;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.EducationContentBoard div:last-child p:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    border: 2px solid rgb(255, 255, 255, 0);
+}
+
 /*-------------------------*/
 /* RESPONSIVENESS HANDLING */
 /*-------------------------*/
@@ -96,5 +177,9 @@
 @media (min-width: 1025px) {
     .EducationHistoryCard {
         width: 50vw;
+    }
+
+    .EducationContentBoard {
+        width: 70%;
     }
 }
