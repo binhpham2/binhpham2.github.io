@@ -7,7 +7,7 @@ export const education = [
         'school': 'Aalto University',
         'time': 'September 2022 - July 2025',
         'courses': [
-            'Microservice Architectures & Serverless Computing', 
+            'Microservice Architectures and Serverless Computing', 
             'Information Security', 
             'Cryptography', 
             'Declarative Programming', 
@@ -30,7 +30,7 @@ export const education = [
             'Statistical Inference (R)', 
             'Data Structures and Algorithms', 
             'Principle of Algorithmic Techniques', 
-            'Programming Courses (Scala, Python, C, SQL)', 
+            'Programming Courses (Scala, Python, C, and SQL)', 
             'Theory of Computation',
         ],
     }

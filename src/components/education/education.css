@@ -141,7 +141,7 @@
 }
 
 .EducationContentBoard span {
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 .EducationContentBoard div:last-child {
