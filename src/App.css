@@ -6,7 +6,7 @@
     height: fit-content;
 }
 
-h1, h2, p {
+h1, h2, p, ul, li {
     color: white;
     font-family: 'Segoe Script', 'Papyrus', Georgia, 'Times New Roman', Times, serif;
 }
