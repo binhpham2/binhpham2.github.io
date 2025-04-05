@@ -70,6 +70,42 @@ SECOND TYPE:
     }
 }
 
+/*--------------------------------------------*/
+/* ANIMATION: Employment Content Board appear */
+/*--------------------------------------------*/
+
+@keyframes employmentContentBoardAppearOnSmallScreen {
+    0% {
+        width: 0;
+        height: 0;
+        padding: 0;
+    } 50% {
+        width: 0;
+        height: 70%;
+        padding: 2vh 5vw;
+    } 100% {
+        width: 70%;
+        height: 70%;
+        padding: 2vh 5vw;
+    }
+}
+
+@keyframes employmentContentBoardAppearOnLargeScreen {
+    0% {
+        width: 0;
+        height: 0;
+        padding: 0;
+    } 50% {
+        width: 0;
+        height: 70%;
+        padding: 2vh 5vw;
+    } 100% {
+        width: 50%;
+        height: 70%;
+        padding: 2vh 5vw;
+    }
+}
+
 /*-------------------------------------------*/
 /* COMPONENT: Employment outermost container */
 /*-------------------------------------------*/
@@ -205,6 +241,7 @@ SECOND TYPE:
     border-radius: 20px;
     padding: 2vh 5vw;
     overflow: scroll;
+    animation: employmentContentBoardAppearOnLargeScreen 1s ease-out forwards;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -264,5 +301,6 @@ SECOND TYPE:
 @media (max-width: 768px) {
     .EmploymentContentBoard {
         width: 70%;
+        animation: employmentContentBoardAppearOnSmallScreen 1s ease-out forwards;
     }
 }
