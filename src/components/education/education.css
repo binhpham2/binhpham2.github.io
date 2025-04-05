@@ -1,7 +1,4 @@
 .Education {
-    /* Scrolling setup */
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     /* Dimension */
     width: 100vw;
     height: 100vh;

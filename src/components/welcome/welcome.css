@@ -63,9 +63,6 @@
 /*----------------------------*/
 
 .Welcome {
-    /* Scrolling setup */
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     /* Position */
     position: fixed;
     top: 0;
