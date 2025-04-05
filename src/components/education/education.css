@@ -1,3 +1,39 @@
+/*--------------------------------------------*/
+/* ANIMATION: Education Content Board appear */
+/*--------------------------------------------*/
+
+@keyframes educationContentBoardAppearOnSmallScreen {
+    0% {
+        width: 0;
+        height: 0;
+        padding: 0;
+    } 50% {
+        width: 0;
+        height: 70%;
+        padding: 2vh 5vw;
+    } 100% {
+        width: 70%;
+        height: 70%;
+        padding: 2vh 5vw;
+    }
+}
+
+@keyframes educationContentBoardAppearOnLargeScreen {
+    0% {
+        width: 0;
+        height: 0;
+        padding: 0;
+    } 50% {
+        width: 0;
+        height: 70%;
+        padding: 2vh 5vw;
+    } 100% {
+        width: 50%;
+        height: 70%;
+        padding: 2vh 5vw;
+    }
+}
+
 .Education {
     /* Dimension */
     width: 100vw;
@@ -34,7 +70,7 @@
     border-radius: 20px;
     margin: 2vh 0;
     padding: 2vh 2vw;
-    width: 70vw;
+    width: 50vw;
     height: fit-content;
     max-height: 30vh;
     overflow: hidden;
@@ -115,6 +151,7 @@
     border-radius: 20px;
     padding: 2vh 5vw;
     overflow: scroll;
+    animation: educationContentBoardAppearOnLargeScreen 1s ease-out forwards;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -171,12 +208,13 @@
 /* RESPONSIVENESS HANDLING */
 /*-------------------------*/
 
-@media (min-width: 1025px) {
+@media (max-width: 768px) {
     .EducationHistoryCard {
-        width: 50vw;
+        width: 70vw;
     }
 
     .EducationContentBoard {
         width: 70%;
+        animation: educationContentBoardAppearOnSmallScreen 1s ease-out forwards;
     }
 }
