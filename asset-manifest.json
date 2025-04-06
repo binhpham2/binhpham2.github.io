@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7ed7fc45.css",
-    "main.js": "/static/js/main.134f17f0.js",
+    "main.css": "/static/css/main.233b3ab9.css",
+    "main.js": "/static/js/main.8fd2c603.js",
     "static/media/latern_3.png": "/static/media/latern_3.93a1f76bdbccc9ec0a3c.png",
     "static/media/latern_1.png": "/static/media/latern_1.1d595d8062b549699ec7.png",
     "static/media/latern_2.png": "/static/media/latern_2.69c3534723e50b6fe8ea.png",
@@ -16,11 +16,11 @@
     "static/media/dragon_1.png": "/static/media/dragon_1.e1c47d307e14f204e63c.png",
     "static/media/dragon_7.png": "/static/media/dragon_7.67778abdf7bbc5282196.png",
     "index.html": "/index.html",
-    "main.7ed7fc45.css.map": "/static/css/main.7ed7fc45.css.map",
-    "main.134f17f0.js.map": "/static/js/main.134f17f0.js.map"
+    "main.233b3ab9.css.map": "/static/css/main.233b3ab9.css.map",
+    "main.8fd2c603.js.map": "/static/js/main.8fd2c603.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ed7fc45.css",
-    "static/js/main.134f17f0.js"
+    "static/css/main.233b3ab9.css",
+    "static/js/main.8fd2c603.js"
   ]
 }
