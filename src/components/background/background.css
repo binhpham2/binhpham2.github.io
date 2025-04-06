@@ -154,6 +154,7 @@
     width: 100px;
     height: 100px;
     animation: leaf_falling 8s linear infinite;
+    pointer-events: none;
 }
 
 .GreenLeaf {

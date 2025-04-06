@@ -193,14 +193,17 @@ SECOND TYPE:
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* Correspond to absent style */
     transform: scaleX(1);
     opacity: 1;
+    pointer-events: auto;
     transition: 1s;
 }
 
 .EmploymentContentAbsent {
     transform: scaleX(0);
     opacity: 0;
+    pointer-events: none;
 }
 
 .EmploymentContentBoard {
