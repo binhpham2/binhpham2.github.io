@@ -10,7 +10,7 @@ const EducationHistory = () => {
 
     return (
         <div className='EducationHistory'>
-            {viewedRecord ? <EducationContent viewedRecord={viewedRecord} setViewedRecord={setViewedRecord} /> : null}
+            <EducationContent viewedRecord={viewedRecord} setViewedRecord={setViewedRecord} />
             {education.map(
                 record => <EducationHistoryCard 
                     key={`${record.degree} ${record.major} ${record.minor} ${record.school}`}

@@ -1,39 +1,3 @@
-/*--------------------------------------------*/
-/* ANIMATION: Education Content Board appear */
-/*--------------------------------------------*/
-
-@keyframes educationContentBoardAppearOnSmallScreen {
-    0% {
-        width: 0;
-        height: 0;
-        padding: 0;
-    } 50% {
-        width: 0;
-        height: 70%;
-        padding: 2vh 5vw;
-    } 100% {
-        width: 70%;
-        height: 70%;
-        padding: 2vh 5vw;
-    }
-}
-
-@keyframes educationContentBoardAppearOnLargeScreen {
-    0% {
-        width: 0;
-        height: 0;
-        padding: 0;
-    } 50% {
-        width: 0;
-        height: 70%;
-        padding: 2vh 5vw;
-    } 100% {
-        width: 50%;
-        height: 70%;
-        padding: 2vh 5vw;
-    }
-}
-
 .Education {
     /* Dimension */
     width: 100vw;
@@ -138,11 +102,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: scaleX(1);
+    opacity: 1;
+    transition: 1s;
+}
+
+.EducationContentAbsent {
+    transform: scaleX(0);
+    opacity: 0;
 }
 
 .EducationContentBoard {
-    width: 50%;
-    height: 70%;
+    width: fit-content;
+    max-width: 50%;
+    height: fit-content;
+    max-height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,7 +125,6 @@
     border-radius: 20px;
     padding: 2vh 5vw;
     overflow: scroll;
-    animation: educationContentBoardAppearOnLargeScreen 1s ease-out forwards;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -214,7 +187,6 @@
     }
 
     .EducationContentBoard {
-        width: 70%;
-        animation: educationContentBoardAppearOnSmallScreen 1s ease-out forwards;
+        max-width: 70%;
     }
 }
