@@ -5,7 +5,7 @@ const Education = ({ currentViewedSection }) => {
     return (
         <div className={`Education ${(currentViewedSection !== 'Education') ? 'EducationDisappear' : ''}`}>
             <h1>Education</h1>
-            <EducationHistory />
+            <EducationHistory currentViewedSection={currentViewedSection} />
         </div>
     )
 }

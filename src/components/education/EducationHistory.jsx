@@ -1,12 +1,16 @@
 import './education.css'
 import { education } from '../../data/education'
 import EducationHistoryCard from './EducationHistoryCard'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import EducationContent from './EducationContent'
 
-const EducationHistory = () => {
+const EducationHistory = ({ currentViewedSection }) => {
 
     const [viewedRecord, setViewedRecord] = useState(null)
+
+    useEffect(() => {
+        setViewedRecord(null)
+    }, [currentViewedSection])
 
     return (
         <div className='EducationHistory'>

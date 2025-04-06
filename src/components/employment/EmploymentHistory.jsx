@@ -1,12 +1,16 @@
 import './employment.css'
 import EmploymentHistoryCard from './EmploymentHistoryCard'
 import { employments } from '../../data/employment'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import EmploymentContent from './EmploymentContent'
 
-const EmploymentHistory = () => {
+const EmploymentHistory = ({ currentViewedSection }) => {
 
     const [viewedEmployment, setViewedEmployment] = useState(null)
+
+    useEffect(() => {
+        setViewedEmployment(null)
+    }, [currentViewedSection])
 
     /* There are two type of employment cards. Let them be first stack and second stack. 
     The reason there are those two stacks is to make the company logos scroll infinitely.
