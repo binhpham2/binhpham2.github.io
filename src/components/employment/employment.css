@@ -244,7 +244,7 @@ SECOND TYPE:
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
     padding: 2vh 5vw;
     overflow: scroll;
