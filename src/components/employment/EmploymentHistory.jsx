@@ -15,7 +15,7 @@ const EmploymentHistory = () => {
     Therefore, the first type is visible in the beginning, and the second is visible on scrolling. */
     return (
         <div className='EmploymentHistory'>
-            {viewedEmployment ? <EmploymentContent viewedEmployment={viewedEmployment} setViewedEmployment={setViewedEmployment} /> : null}
+            <EmploymentContent viewedEmployment={viewedEmployment} setViewedEmployment={setViewedEmployment} />
             {employments.map(
                 employment => <EmploymentHistoryCard 
                     key={employment.company + employment.time + 'first'} 
