@@ -83,7 +83,7 @@
     transform: translateX(0);
     pointer-events: auto;
     /* Transition duration */
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .WelcomeDisappear {
