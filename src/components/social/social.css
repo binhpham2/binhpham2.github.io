@@ -1,0 +1,90 @@
+.Social {
+    /* Position */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Dimension */
+    width: 100vw;
+    height: 100vh;
+    z-index: 450;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* Correspond to disappearance style */
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+    /* Transition duration */
+    transition: 1s;
+}
+
+.SocialDisappear {
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+}
+
+.Social h1 {
+    padding: 2vh 4vw;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+}
+
+.SocialGroup {
+    width: 50%;
+    height: fit-content;
+    max-height: 30%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh 1vw;
+    margin: 1vh 1vw;
+}
+
+.SocialGroup > div {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+}
+
+.SocialGroup > div > a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1vh 1vw;
+    margin: 1vh 1vw;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.SocialGroup > div > a:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    border: 2px solid rgb(255, 255, 255, 0);
+}
+
+/*-------------------------*/
+/* RESPONSIVENESS HANDLING */
+/*-------------------------*/
+
+@media (max-width: 768px) {
+    .SocialGroup {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .SocialGroup {
+        width: 40%;
+    }
+}

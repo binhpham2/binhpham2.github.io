@@ -7,6 +7,7 @@ import splashGif from './images/ink/splash.gif'
 import Employment from './components/employment/Employment';
 import Education from './components/education/Education';
 import Projects from './components/projects/Projects';
+import Social from './components/social/Social';
 import { components } from './data/sections';
 
 const App = () => {
@@ -65,6 +66,7 @@ const App = () => {
       <Employment currentViewedSection={currentViewedSection} />
       <Education currentViewedSection={currentViewedSection} />
       <Projects currentViewedSection={currentViewedSection} />
+      <Social currentViewedSection={currentViewedSection} />
       {/* View only one section at a time. */}
       {/* 
         (currentViewedSection === 'Employment') ? <Employment /> 
