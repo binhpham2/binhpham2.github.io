@@ -75,6 +75,10 @@ SECOND TYPE:
 /*-------------------------------------------*/
 
 .Employment {
+    /* Position */
+    position: fixed;
+    top: 0;
+    left: 0;
     /* Dimension */
     width: 100vw;
     height: 100vh;

@@ -60,15 +60,18 @@ const App = () => {
       {/*--------------*/}
       {/* CONTENT VIEW */}
       {/*--------------*/}
-      {/* Unlike other sections, Welcome is loaded once, and never removed. Reason is specified in ./components/welcome/Welcome.jsx */}
-      <Welcome currentViewedSection={currentViewedSection}/>
       {/* View only one section at a time. */}
-      { 
+      <Welcome currentViewedSection={currentViewedSection} />
+      <Employment currentViewedSection={currentViewedSection} />
+      <Education currentViewedSection={currentViewedSection} />
+      <Projects currentViewedSection={currentViewedSection} />
+      {/* View only one section at a time. */}
+      {/* 
         (currentViewedSection === 'Employment') ? <Employment /> 
         : (currentViewedSection === 'Education') ? <Education /> 
         : (currentViewedSection === 'Projects') ? <Projects />
         : null 
-      }
+      */}
     </div>
   );
 }
