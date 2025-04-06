@@ -78,7 +78,7 @@
     width: 100vw;
     z-index: 200;
     margin: 0;
-    /* Correspond to disappearance animation */
+    /* Correspond to disappearance style */
     opacity: 1;
     pointer-events: auto;
     transition: 1s;

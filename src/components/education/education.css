@@ -12,11 +12,15 @@
     justify-content: flex-start;
     align-items: center;
     background-color: transparent;
+    /* Correspond to disappearance style */
+    opacity: 1;
+    pointer-events: auto;
+    transition: 1s;
 }
 
 .EducationDisappear {
     opacity: 0;
-    z-index: -100;
+    pointer-events: none;
 }
 
 .Education h1 {

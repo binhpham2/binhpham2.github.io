@@ -87,11 +87,15 @@ SECOND TYPE:
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    /* Correspond to disappearance style */
+    opacity: 1;
+    pointer-events: auto;
+    transition: 1s;
 }
 
 .EmploymentDisappear {
     opacity: 0;
-    z-index: -100;
+    pointer-events: none;
 }
 
 .Employment h1 {
