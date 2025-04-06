@@ -13,12 +13,15 @@
     align-items: center;
     /* Correspond to disappearance style */
     opacity: 1;
+    transform: translateY(0);
     pointer-events: auto;
+    /* Transition duration */
     transition: 1s;
 }
 
 .ProjectsDisappear {
     opacity: 0;
+    transform: translateY(100vh);
     pointer-events: none;
 }
 

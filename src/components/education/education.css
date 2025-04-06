@@ -14,12 +14,15 @@
     background-color: transparent;
     /* Correspond to disappearance style */
     opacity: 1;
+    transform: translateX(0);
     pointer-events: auto;
+    /* Transition duration */
     transition: 1s;
 }
 
 .EducationDisappear {
     opacity: 0;
+    transform: translateX(100vw);
     pointer-events: none;
 }
 
