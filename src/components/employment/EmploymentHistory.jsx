@@ -4,12 +4,13 @@ import { employments } from '../../data/employment'
 import { useEffect, useState } from 'react'
 import EmploymentContent from './EmploymentContent'
 
-const EmploymentHistory = ({ currentViewedSection }) => {
+const EmploymentHistory = ({ currentViewedSection, setEmploymentDim }) => {
 
     const [viewedEmployment, setViewedEmployment] = useState(null)
 
     useEffect(() => {
         setViewedEmployment(null)
+        setEmploymentDim(false)
     }, [currentViewedSection])
 
     /* There are two type of employment cards. Let them be first stack and second stack. 
@@ -19,13 +20,18 @@ const EmploymentHistory = ({ currentViewedSection }) => {
     Therefore, the first type is visible in the beginning, and the second is visible on scrolling. */
     return (
         <div className='EmploymentHistory'>
-            <EmploymentContent viewedEmployment={viewedEmployment} setViewedEmployment={setViewedEmployment} />
+            <EmploymentContent 
+                viewedEmployment={viewedEmployment} 
+                setViewedEmployment={setViewedEmployment} 
+                setEmploymentDim={setEmploymentDim} 
+            />
             {employments.map(
                 employment => <EmploymentHistoryCard 
                     key={employment.company + employment.time + 'first'} 
                     employment={employment}
                     type={'FirstTypeEmploymentHistoryCard'} 
-                    setViewedEmployment={setViewedEmployment}
+                    setViewedEmployment={setViewedEmployment} 
+                    setEmploymentDim={setEmploymentDim}
                 />
             )}
             {employments.map(
@@ -33,7 +39,8 @@ const EmploymentHistory = ({ currentViewedSection }) => {
                     key={employment.company + employment.time  + 'second'} 
                     employment={employment}
                     type={'SecondTypeEmploymentHistoryCard'} 
-                    setViewedEmployment={setViewedEmployment}
+                    setViewedEmployment={setViewedEmployment} 
+                    setEmploymentDim={setEmploymentDim}
                 />
             )}
         </div>

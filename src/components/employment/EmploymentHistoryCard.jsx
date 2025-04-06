@@ -6,7 +6,7 @@ import futuriceLogo from '../../images/logos/futurice.png'
 import aaltoLogo from '../../images/logos/aalto.png'
 import slushLogo from '../../images/logos/slush.png'
 
-const EmploymentHistoryCard = ({ employment, type, setViewedEmployment }) => {
+const EmploymentHistoryCard = ({ employment, type, setViewedEmployment, setEmploymentDim }) => {
 
     const companyLogos = {
         'KONE': koneLogo,
@@ -20,7 +20,10 @@ const EmploymentHistoryCard = ({ employment, type, setViewedEmployment }) => {
     return (
         <div 
             className={`EmploymentHistoryCard ${type}`} 
-            onClick={() => setViewedEmployment(employment)}
+            onClick={() => {
+                setViewedEmployment(employment) 
+                setEmploymentDim(true)
+            }}
         >
             <img 
                 src={companyLogos[employment.company]} 

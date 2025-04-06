@@ -1,6 +1,6 @@
 import './employment.css'
 
-const EmploymentContent = ({ viewedEmployment, setViewedEmployment }) => {
+const EmploymentContent = ({ viewedEmployment, setViewedEmployment, setEmploymentDim }) => {
     return (
         <div className={`EmploymentContent ${viewedEmployment ? '' : 'EmploymentContentAbsent'}`}>
             {
@@ -19,7 +19,10 @@ const EmploymentContent = ({ viewedEmployment, setViewedEmployment }) => {
                         )
                     )}
                     <div>
-                        <p onClick={() => setViewedEmployment(null)}>Close</p>
+                        <p onClick={() => {
+                            setViewedEmployment(null) 
+                            setEmploymentDim(false)
+                        }}>Close</p>
                     </div>
                 </div> : null
             }
