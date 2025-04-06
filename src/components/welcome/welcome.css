@@ -76,9 +76,17 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    opacity: 1;
-    z-index: 150;
+    z-index: 200;
     margin: 0;
+    /* Correspond to disappearance animation */
+    opacity: 1;
+    pointer-events: auto;
+    transition: 1s;
+}
+
+.WelcomeDisappear {
+    opacity: 0;
+    pointer-events: none;
 }
 
 /*-----------------*/
@@ -102,7 +110,6 @@
     height: 90%;
     animation: nameFloat 2s linear infinite;
 }
-
 
 .Name > svg path {
     fill: transparent;
@@ -167,11 +174,6 @@
 .EmptyWelcomeGridItem {
     grid-column: span 3;
     grid-row: span 1;
-}
-
-.WelcomeDisappear {
-    opacity: 0;
-    z-index: -100;
 }
 
 /*-------------------------*/

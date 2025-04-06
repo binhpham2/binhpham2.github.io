@@ -13,6 +13,11 @@
     align-items: center;
 }
 
+.ProjectsDisappear {
+    opacity: 0;
+    z-index: -100;
+}
+
 .Projects h1 {
     padding: 2vh 4vw;
     margin-top: 15vh;

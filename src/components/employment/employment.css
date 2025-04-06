@@ -89,6 +89,11 @@ SECOND TYPE:
     align-items: center;
 }
 
+.EmploymentDisappear {
+    opacity: 0;
+    z-index: -100;
+}
+
 .Employment h1 {
     padding: 2vh 4vw;
     margin-top: 15vh;
