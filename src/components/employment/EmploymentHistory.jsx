@@ -11,7 +11,7 @@ const EmploymentHistory = ({ currentViewedSection, setEmploymentDim }) => {
     useEffect(() => {
         setViewedEmployment(null)
         setEmploymentDim(false)
-    }, [currentViewedSection])
+    }, [currentViewedSection, setEmploymentDim])
 
     /* There are two type of employment cards. Let them be first stack and second stack. 
     The reason there are those two stacks is to make the company logos scroll infinitely.

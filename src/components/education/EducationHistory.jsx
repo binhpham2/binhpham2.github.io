@@ -11,7 +11,7 @@ const EducationHistory = ({ currentViewedSection, setEducationDim }) => {
     useEffect(() => {
         setViewedRecord(null)
         setEducationDim(false)
-    }, [currentViewedSection])
+    }, [currentViewedSection, setEducationDim])
 
     return (
         <div className='EducationHistory'>
