@@ -1,6 +1,6 @@
 import './education.css'
 
-const EducationContent = ({ viewedRecord, setViewedRecord }) => {
+const EducationContent = ({ viewedRecord, setViewedRecord, setEducationDim }) => {
     return (
         <div className={`EducationContent ${viewedRecord ? '' : 'EducationContentAbsent'}`}>
             {
@@ -19,7 +19,10 @@ const EducationContent = ({ viewedRecord, setViewedRecord }) => {
                         </ul>
                     </div>
                     <div>
-                        <p onClick={() => setViewedRecord(null)}>Close</p>
+                        <p onClick={() => {
+                            setViewedRecord(null)
+                            setEducationDim(false)
+                        }}>Close</p>
                     </div>
                 </div> : null
             }
