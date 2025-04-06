@@ -13,7 +13,7 @@ const EducationContent = ({ viewedRecord, setViewedRecord }) => {
                     <p><span>Relevant Coursework:</span></p>
                     <ul>
                         {viewedRecord.courses.map(
-                            course => <li><p>{course}</p></li>
+                            course => <li key={`${viewedRecord.degree} ${viewedRecord.school} ${viewedRecord.course}`}><p>{course}</p></li>
                         )}
                     </ul>
                 </div>
