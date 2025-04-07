@@ -3,7 +3,7 @@ import './welcome.css'
 const Introduction = () => {
     return (
         <div className='Introduction'>
-            <p>An aspiring software and data engineer who loves building random stuffs.</p>
+            <p>An aspiring software and data engineer who is passionate about building impactful products.</p>
         </div>
     );
 }
