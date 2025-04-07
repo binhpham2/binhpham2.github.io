@@ -15,6 +15,17 @@ h1, h2, p, ul, li, a {
     display: none;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+div::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+div {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 /* RESPONSIVENESS HANDLING */
 
 @media (max-width: 200px) {
