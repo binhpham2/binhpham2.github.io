@@ -14,7 +14,7 @@ const Social = ({ currentViewedSection }) => {
                 <div>
                     <a href={'https://www.linkedin.com/in/binh-pham-aab6a719a/'} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <a href={'https://github.com/pdtbinh'} target="_blank" rel="noopener noreferrer">Github</a>
-                    <a href={'/BinhPham_CV.pdf'} download='BinhPham_Resume.pdf' target="_blank" rel="noopener noreferrer">Resume</a>
+                    <a href={'/BinhPham_Resume.pdf'} download='BinhPham_Resume.pdf' target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
             </div>
         </div>
