@@ -28,7 +28,7 @@
 .Social h1 {
     padding: 2vh 4vw;
     margin-top: 15vh;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
 }
@@ -71,6 +71,16 @@
     background-color: rgba(255, 255, 255, 0.9);
     color: black;
     border: 2px solid rgb(255, 255, 255, 0);
+}
+
+.Social h2 {
+    margin: 1vh 0;
+    padding: 0;
+}
+
+.SocialGroup p, .SocialGroup a {
+    margin: 1vh 0;
+    padding: 0;
 }
 
 /*-------------------------*/

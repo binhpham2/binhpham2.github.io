@@ -17,6 +17,9 @@ const Social = ({ currentViewedSection }) => {
                     <a href={'/BinhPham_Resume.pdf'} download='BinhPham_Resume.pdf' target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
             </div>
+            <div className='SocialGroup'>
+                <p>Copyright &#169; 2025 Binh Pham</p>
+            </div>
         </div>
     )
 }
