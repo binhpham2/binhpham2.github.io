@@ -1,8 +1,34 @@
+import { useEffect, useRef } from 'react'
 import './education.css'
 
 const EducationContent = ({ viewedRecord, setViewedRecord, setEducationDim }) => {
+    
+    const educationContentRef = useRef(null)
+
+    useEffect(() => {
+        const handleEducationContentClick = (event) => {
+            const board = document.querySelector('.EducationContentBoard')
+            if (board && !board.contains(event.target)) {
+                setViewedRecord(null)
+                setEducationDim(false)
+            }
+        }
+
+        if (educationContentRef && educationContentRef.current) {
+            educationContentRef.current.addEventListener(
+                'click', handleEducationContentClick
+            )
+        }
+
+        // Cleanning up by removing the current click listener before a new one is added.
+        const educationContentRefCopy = educationContentRef?.current
+        return () => educationContentRefCopy?.removeEventListener(
+            'click', handleEducationContentClick
+        )
+    }, [educationContentRef, viewedRecord, setViewedRecord, setEducationDim])
+    
     return (
-        <div className={`EducationContent ${viewedRecord ? '' : 'EducationContentAbsent'}`}>
+        <div ref={educationContentRef} className={`EducationContent ${viewedRecord ? '' : 'EducationContentAbsent'}`}>
             {
                 viewedRecord ? <div className='EducationContentBoard'>
                     <div className='EducationContentBoardHeadline'>

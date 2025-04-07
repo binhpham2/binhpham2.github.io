@@ -1,8 +1,34 @@
+import { useEffect, useRef } from 'react'
 import './employment.css'
 
 const EmploymentContent = ({ viewedEmployment, setViewedEmployment, setEmploymentDim }) => {
+    
+    const employmentContentRef = useRef(null)
+
+    useEffect(() => {
+        const handleEmploymentContentClick = (event) => {
+            const board = document.querySelector('.EmploymentContentBoard')
+            if (board && !board.contains(event.target)) {
+                setViewedEmployment(null) 
+                setEmploymentDim(false)
+            }
+        }
+        
+        if (employmentContentRef && employmentContentRef.current) {
+            employmentContentRef.current.addEventListener(
+                'click', handleEmploymentContentClick
+            )
+        }
+
+        // Cleanning up by removing the current click listener before a new one is added.
+        const employmentContentRefCopy = employmentContentRef?.current
+        return () => employmentContentRefCopy?.removeEventListener(
+            'click', handleEmploymentContentClick
+        )
+    }, [employmentContentRef, viewedEmployment, setViewedEmployment, setEmploymentDim])
+
     return (
-        <div className={`EmploymentContent ${viewedEmployment ? '' : 'EmploymentContentAbsent'}`}>
+        <div ref={employmentContentRef} className={`EmploymentContent ${viewedEmployment ? '' : 'EmploymentContentAbsent'}`}>
             {
                 viewedEmployment ? <div className='EmploymentContentBoard'>
                     <div className='EmploymentContentBoardHeadline'>
