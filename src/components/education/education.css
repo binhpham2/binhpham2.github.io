@@ -166,43 +166,39 @@
     scrollbar-width: none;  /* Firefox */
 }
 
-.EducationContentBoard h2 {
-    text-align: center;
-    width: 100%;
+.EducationContentBoard h2:first-of-type {
+    text-align: left;
+    width: 80%;
     height: fit-content;
     padding: 1vh 0;
     margin: 1vh 0;
+}
+
+.EducationContentBoardHeadline {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid white;
+}
+
+.EducationContentBoardHeadline h2:last-of-type {
+    width: fit-content;
+    height: fit-content;
+    text-align: right;
+    transition: 0.2s;
+    transform: scale(1);
+}
+
+.EducationContentBoardHeadline h2:last-of-type:hover {
+    cursor: pointer;
+    transform: scale(1.4);
 }
 
 .EducationContentBoard span {
     font-weight: bold;
-}
-
-.EducationContentBoard div:last-child {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid white;
-    margin-top: 1vh;
-}
-
-.EducationContentBoard div:last-child p {
-    font-weight: bold;
-    padding: 1vh 2vw;
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    transition: 0.2s;
-}
-
-.EducationContentBoard div:last-child p:hover {
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: black;
-    border: 2px solid rgb(255, 255, 255, 0);
 }
 
 /*-------------------------*/
